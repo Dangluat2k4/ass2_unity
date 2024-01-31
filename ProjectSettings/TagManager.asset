@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Ground
+  - coin
+  - music
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Ground
+  - Climbing
+  - Player
+  - Background
+  - MushRoom
+  - Enemy
+  - Bullet
+  - interactables
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 2486471299
+    locked: 0
+  - name: Platfrom
+    uniqueID: 3618872313
+    locked: 0
+  - name: Climbing
+    uniqueID: 2607806323
+    locked: 0
+  - name: Water_map
+    uniqueID: 1113142407
+    locked: 0
+  - name: MushRoom
+    uniqueID: 3571152517
+    locked: 0
+  - name: Enemy
+    uniqueID: 538859929
+    locked: 0
+  - name: Interactables
+    uniqueID: 1041596851
+    locked: 0
+  - name: Player
+    uniqueID: 3719880649
+    locked: 0
