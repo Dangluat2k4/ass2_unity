@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class Game_Session : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
     [SerializeField] TextMeshProUGUI liveText;
     [SerializeField] TextMeshProUGUI coinText;
+    [SerializeField] TextMeshProUGUI setting;
     [SerializeField] int countCoin = 0;
     /// <summary>
     /// Start is called on the frame when a script is enabled just before
@@ -17,6 +19,7 @@ public class Game_Session : MonoBehaviour
     {
         liveText.text = "Live : " + playerLives.ToString();
         coinText.text = "Poin : " + countCoin.ToString();
+        // setting = setting.ToString();
     }
     /// <summary>
     /// Awake is called when the script instance is being loaded.
@@ -46,7 +49,7 @@ public class Game_Session : MonoBehaviour
         {
 
             StartCoroutine(RestartAfterDelay(3f));
-        //    FindObjectOfType<Pain_game>().Loadgame();
+            //    FindObjectOfType<Pain_game>().Loadgame();
         }
     }
     void ResetGameSession()
@@ -74,7 +77,7 @@ public class Game_Session : MonoBehaviour
         yield return new WaitForSeconds(delay); // Chờ 3 giây
 
         ResetGameSession();
-     //   FindObjectOfType<Pain_game>().Loadgame();
+        //   FindObjectOfType<Pain_game>().Loadgame();
     }
 
 }

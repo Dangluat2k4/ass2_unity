@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-    void ClimbLadder()
+    public void ClimbLadder()
     {
         if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
         {
@@ -165,46 +165,46 @@ public class PlayerMovement : MonoBehaviour
     //         FlipSprite();
     //     }
     // }
-    public void jumping()
-    {
-        if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
-        {
-            return;
-        }
+    // public void jumping()
+    // {
+    //     if (!myFeetCollider.IsTouchingLayers(LayerMask.GetMask("Ground")))
+    //     {
+    //         return;
+    //     }
 
-        /// do stuff
-        myRigidbody.velocity += new Vector2(0f, jumSpeed);
-    }
-    public void left()
-    {
-        Debug.Log("click");
-        transform.Translate(-Time.deltaTime * 5, 0, 0);
-        Vector2 scale = transform.localScale;
-        scale.x *= scale.x > 0 ? 1 : -1;
-        // neu scale >0 thi scale lon hon 0 else
-        transform.localScale = scale;
-        bool playerHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
-        animator.SetBool("IsRuning", playerHorizontalSpeed);
-        FlipSprite();
-    }
-    public void right()
-    {
-        Debug.Log("click");
-        transform.Translate(Time.deltaTime * 5, 0, 0);
-        Vector2 scale = transform.localScale;
-        scale.x *= scale.x > 0 ? 1 : -1;
-        // neu scale >0 thi scale lon hon 0 else
-        transform.localScale = scale;
-        bool playerHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
-        animator.SetBool("IsRuning", playerHorizontalSpeed);
-        FlipSprite();
-    }
-    public void guning()
-    {
-        if (!isAlive)
-        {
-            return;
-        }
-        Instantiate(bullet, gun.position, transform.rotation);
-    }
+    //     /// do stuff
+    //     myRigidbody.velocity += new Vector2(0f, jumSpeed);
+    // }
+    // public void left()
+    // {
+    //     Debug.Log("click");
+    //     transform.Translate(-Time.deltaTime * 5, 0, 0);
+    //     Vector2 scale = transform.localScale;
+    //     scale.x *= scale.x > 0 ? 1 : -1;
+    //     // neu scale >0 thi scale lon hon 0 else
+    //     transform.localScale = scale;
+    //     bool playerHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+    //     animator.SetBool("IsRuning", playerHorizontalSpeed);
+    //     FlipSprite();
+    // }
+    // public void right()
+    // {
+    //     Debug.Log("click");
+    //     transform.Translate(Time.deltaTime * 5, 0, 0);
+    //     Vector2 scale = transform.localScale;
+    //     scale.x *= scale.x > 0 ? 1 : -1;
+    //     // neu scale >0 thi scale lon hon 0 else
+    //     transform.localScale = scale;
+    //     bool playerHorizontalSpeed = Mathf.Abs(myRigidbody.velocity.x) > Mathf.Epsilon;
+    //     animator.SetBool("IsRuning", playerHorizontalSpeed);
+    //     FlipSprite();
+    // }
+    // public void guning()
+    // {
+    //     if (!isAlive)
+    //     {
+    //         return;
+    //     }
+    //     Instantiate(bullet, gun.position, transform.rotation);
+    // }
 }

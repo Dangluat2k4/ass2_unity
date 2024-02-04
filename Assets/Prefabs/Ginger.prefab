@@ -79,7 +79,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -575086647
-  m_SortingLayer: 6
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_Sprite: {fileID: 325025350, guid: c4b990474d06eb04eace47ea0c4ce429, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -128,7 +128,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 8
+  m_GravityScale: 4
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -217,10 +217,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64fdbad49b4722848a55697d6652a114, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  runSpeed: 10
-  jumSpeed: 22
+  runSpeed: 5
+  jumSpeed: 13
   climbSpeed: 5
-  bullet: {fileID: 0}
+  bullet: {fileID: 4053127975729909479, guid: a66dfccd082bd88479da9256036e4488, type: 3}
   gun: {fileID: 7191573065104265446}
   deathKick: {x: 10, y: 20.85}
 --- !u!61 &3251821389408856848
@@ -280,6 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa950ebb67ba75b42af92b13e87570ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinPickupSFX: {fileID: 8300000, guid: c6213af3448f23c429d10a590af629d8, type: 3}
+  pointsPickup: 100
 --- !u!1 &7225452026711284466
 GameObject:
   m_ObjectHideFlags: 0
@@ -305,7 +307,7 @@ Transform:
   m_GameObject: {fileID: 7225452026711284466}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.361, y: -0.129, z: 0}
+  m_LocalPosition: {x: 0.361, y: -0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
