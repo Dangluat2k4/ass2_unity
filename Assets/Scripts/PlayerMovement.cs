@@ -58,6 +58,14 @@ public class PlayerMovement : MonoBehaviour
         }
         Instantiate(bullet, gun.position, transform.rotation);
     }
+    void OnFire(InputValue value)
+    {
+        if (!isAlive)
+        {
+            return;
+        }
+        Instantiate(bullet, gun.position, transform.rotation);
+    }
     public void OnMove(InputValue value)
     {
         if (!isAlive)
